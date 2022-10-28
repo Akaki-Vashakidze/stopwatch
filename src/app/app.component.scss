@@ -1,10 +1,10 @@
 .stopwatch {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%,-50%);
-  width: 80%;
-  height: 80%;
+  transform: translate(-50%,0);
+  width: 100%;
+  height: 100%;
   background-color: rgb(180, 216, 246);
   border-radius: 10px;
 }
@@ -14,14 +14,16 @@
   justify-content: center;
   align-items: center;
   margin: 10px;
-  padding-top: 15px;
   font-size: 40px;
+  height: 50px;
 }
 
 .buttons {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 20%;
 }
 
 .container-div {
@@ -40,7 +42,7 @@
   position: relative;
   width: 260px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   font-size: 30px;
 }
 
@@ -58,15 +60,14 @@
 }
 
 .mat-icon {
-  height: 50px;
-  width: 50px;
-  font-size: 40px;
+  height: 100%;
+  width: 50%;
+  font-size: 80px;
   background-color: brown;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 5% 2%;border-radius: 10px;
   }
 
 
@@ -74,7 +75,7 @@
   position: relative;
   text-align: center;
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 5%;
   background-color: rgb(117, 143, 203);
   padding: 10px;
 }

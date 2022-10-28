@@ -5,12 +5,7 @@
       <div class="sec">{{sec}}.</div>
       <div class="milisec">{{milisec}}</div>
     </div>
-    <div class="buttons">
-      <mat-icon *ngIf="!running" class="icons start" (click)="start()">play_arrow</mat-icon>
-      <mat-icon *ngIf="running" class="icons pause" (click)="pause()">pause</mat-icon>
-      <mat-icon *ngIf="!running" class="icons reset" (click)="reset()">restart_alt</mat-icon>
-      <mat-icon *ngIf="running" class="icons split" (click)="split()">splitscreen</mat-icon>
-    </div>
+
   </div>
   <div class="split-times">
     <div class="times-container">
@@ -21,7 +16,13 @@
        </div>
     </div>
   </div>
-  <div class="send">Send</div>
+  <div class="send" (click)="send()">Send</div>
+  <div class="buttons">
+    <mat-icon *ngIf="!running" class="icons start" (click)="start()">play_arrow</mat-icon>
+    <mat-icon *ngIf="running" class="icons pause" (click)="pause()">pause</mat-icon>
+    <mat-icon *ngIf="!running" class="icons reset" (click)="reset()">restart_alt</mat-icon>
+    <mat-icon *ngIf="running" class="icons split" (click)="split()">splitscreen</mat-icon>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
