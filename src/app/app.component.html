@@ -15,12 +15,13 @@
   <div class="split-times">
     <div class="times-container">
        <div class="split-time time1">
-        <div *ngFor="let split of splits">
+        <div *ngFor="let split of splits" class="splitTimes">
           {{split}}
         </div>
        </div>
     </div>
   </div>
+  <div class="send">Send</div>
 </div>
 
 <router-outlet></router-outlet>
