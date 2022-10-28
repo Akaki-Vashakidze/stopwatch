@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   laneN: any = 'lane1';
-  baseUrl = environment.baseUrl;
   title = 'stopwatch';
   startTimer : any;
   min: any = '0' + 0;
@@ -65,7 +64,7 @@ export class AppComponent {
   send = () => {
     console.log(this.min + ':' + this.sec + '.' + this.milisec)
     // მთავარი შედეგის გაგზავნა
-    this.httClient.post(`${this.baseUrl}/${this.laneN}.json`,
+    this.httClient.post(`https://swim-results-62b50-default-rtdb.europe-west1.firebasedatabase.app/${this.laneN}.json`,
       {result:this.min + ':' + this.sec + '.' + this.milisec}
     ).subscribe(
       response => {
@@ -73,7 +72,7 @@ export class AppComponent {
       }
     )
   //წაშლილი შედეგების გაგზავნა
-    this.httClient.post(`${this.baseUrl}/${this.deletedTimesLaneN}.json`,
+    this.httClient.post(`https://swim-results-62b50-default-rtdb.europe-west1.firebasedatabase.app/${this.deletedTimesLaneN}.json`,
       {result:this.deletedTimes}
     ).subscribe(
       response => {

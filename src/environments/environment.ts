@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  baseUrl: 'https://swim-results-62b50-default-rtdb.europe-west1.firebasedatabase.app'
+  production: false
 };
 
 /*
